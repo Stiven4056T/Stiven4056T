@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PixelPumbler</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header> <!--Encabezado con el menu de navegacion-->
+    <nav>
+        <img src="IMG/logo.png" alt="pixellogo" id="logopixel">
+        <h1>PixelPumbler</h1>
+        <ul class="menu">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="public.html">PUBLICACIONES</a></li>
+        <li><a href="galery.html">MI GALERIA</a></li>
+        <li><a href="contac.html">CONTACTO</a></li>
+        </ul>
+        <div>
+        <a href="#"><button class="loginbtn" id="openModalBtn">INICIAR SESIÓN</button></a>
+        <a href="#"><button class="registerbtn">REGISTRARSE</button></a>
+      </div>
+    </nav>
+   </header>
+
+   <section> <!--Contenido principal con las imagenes de la galeria-->
+    <div class="ful-img" id="fulImgBox">
+      <img src="imgs/1.jpg" id="fulImg" alt="">
+      <span onclick="closeImg()">X</span>
+  </div>
+
+  <h1 class="tituloG"><span>Mi Galeria</span></h1>
+  <div class="img-gallery">
+      <img src="IMG/Img1.jpg" onclick="openFulImg(this.src)" alt="">
+      <img src="IMG/Img2.jpg" onclick="openFulImg(this.src)" alt="">
+      <img src="IMG/Img3.jpg" onclick="openFulImg(this.src)" alt="">
+      <img src="IMG/Img4.jpg" onclick="openFulImg(this.src)" alt="">
+      <img src="IMG/Img5.jpg" onclick="openFulImg(this.src)" alt="">
+      <img src="IMG/Img6.jpg" onclick="openFulImg(this.src)" alt="">
+      <img src="IMG/Img7.jpg" onclick="openFulImg(this.src)" alt="">
+      <img src="IMG/Img8.jpg" onclick="openFulImg(this.src)" alt="">
+  </div>
+   </section>
+
+   <center>
+<div class="tablacolor">
+   <h2 style="color: black;">Crear Pixel art</h2>
+   <div id="color-picker"></div>
+    <label for="color" id="tilpixel">Elige un color:</label>
+    <input type="color" id="color" value="#000000">
+    <button id="eraser">Borrador</button>
+  </div>
+  <div id="pixel-grid"></div>
+</div>
+</center>
+
+   <div id="loginModal" class="modal"> <!--Primera ventana modal cuando undes iniciar sesion-->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+          <h2>Bienvenido a PixelPlumber</h2>
+        </div>
+        <div class="modal-body">
+         <img src="IMG/logo.png" class="imgModal">
+          <p>o</p>
+          <form class="formlogin">
+            <input type="text" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required><br><br>
+            <button type="submit" class="submit-btn">Iniciar Sesión</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+<!-- Modal de Registro -->
+<div id="registerModal" class="modal"> <!--Segunda ventana modal cuando undes registrarse-->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-header">
+      <h2>Crea tu cuenta en PixelPlumber</h2>
+    </div>
+    <div class="modal-body">
+      <img src="IMG/logo.png" class="imgModal">
+      <p>o</p>
+      <form class="formregister">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="password" placeholder="Contraseña" required><br><br>
+        <button type="submit" class="submit-btn">Registrarse</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="pie"> <!--Pie de pagina-->
+  @Derechos Reservados 2024 Stiven Sotomayor
+</footer>
+
+    <script src="JS/funciones.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+</html>
